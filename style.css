@@ -8,9 +8,20 @@ html{
 	scroll-behavior: smooth;	
 }
 
+html.no-scroll{
+	overflow-y: hidden;	
+}
+
 a{
 	text-decoration: none;
 	color: black;
+}
+
+h2{
+	text-align: center;
+	color: #fff;
+	font-size: 3rem;
+	padding-top: 3rem;
 }
 
 .first-view{
@@ -415,4 +426,47 @@ a{
 	height: 100vh;
 	width: 100%;
 	background-color: #000;
+}
+
+.competence{
+	opacity: 0;
+	transform: translateX(-20%);
+	transition: 1s;
+}
+
+.competence.active{
+	opacity: 1;
+	transform: translateX(0);
+	transition: transform 1s, opacity 2s;
+}
+
+.skills-container{
+	width: 100%;
+	margin-top: 10%;
+	height: auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.skill-box{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30vh;
+	width: 15%;
+	background-color: #000;
+	color: #fff;
+	border: 3px solid #fff;
+	border-radius: 5px;
+	transform: translateY(50vh);
+	opacity: 0;
+	transition: .4s;
+}
+
+
+.skill-box.active{
+	transition: transform 1s, opacity 2s;
+	transform: translateY(0);
+	opacity: 1;	
 }

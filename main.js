@@ -1,3 +1,5 @@
+const html = document.querySelector('html');
+
 const loading = document.querySelector('.loading');
 
 const titleSpan1 = document.querySelector('.span-title1');
@@ -17,9 +19,19 @@ const menuContent = document.querySelector('.menu-content');
 const logo = document.querySelector('.logo');
 
 
+const competence = document.querySelector('.competence');
+
+const skill1 = document.querySelector('.skill-box1');
+const skill2 = document.querySelector('.skill-box2');
+const skill3 = document.querySelector('.skill-box3');
+
+
+
+
 burger.addEventListener('click', ()=>{
 	menuContent.classList.toggle('active');
 	burger.classList.toggle('active');
+	html.classList.toggle('no-scroll');
 })
 
 
@@ -66,8 +78,30 @@ window.addEventListener("scroll", ()=>{
 	btn.style.opacity = 1 + -scroll / 250 ;
 	chouette.style.opacity = 1 + -scroll / 250 ;
 	devWeb.style.opacity = 1 + -scroll / 250 ;
-	chouette.style.marginLeft =  + scroll  + "px"; 
-	devWeb.style.marginRight =  + scroll  + "px"; 
+	chouette.style.marginLeft =  + scroll / 2  + "px"; 
+	devWeb.style.marginRight =  + scroll / 2  + "px"; 
+
+
+	if(scroll >= 100){
+		competence.classList.add('active');
+	}
+	else{
+		competence.classList.remove('active');
+	}
+
+	if(scroll >= 400){
+		skill1.classList.add('active');
+		skill2.classList.add('active');
+		skill3.classList.add('active');
+	}
+	else{
+		skill1.classList.remove('active');
+		skill2.classList.remove('active');
+		skill3.classList.remove('active');
+	}
 })
+
+
+
 
 window.onload = start();
