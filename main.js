@@ -26,6 +26,16 @@ const skill2 = document.querySelector('.skill-box2');
 const skill3 = document.querySelector('.skill-box3');
 
 
+const creation = document.querySelector('.black-title');
+
+const creation1 = document.querySelector('.creation1');
+const creation2 = document.querySelector('.creation2');
+const creation3 = document.querySelector('.creation3');
+
+
+const passionTitle = document.querySelector('.passion-title');
+
+
 
 
 burger.addEventListener('click', ()=>{
@@ -99,6 +109,29 @@ window.addEventListener("scroll", ()=>{
 		skill2.classList.remove('active');
 		skill3.classList.remove('active');
 	}
+
+	if(scroll >= 800){
+		creation.style.marginTop = scroll/30 -30 + "vh";
+	}
+
+	if(scroll >= 1300){
+		creation1.classList.add('active');
+		creation2.classList.add('active');
+		creation3.classList.add('active');
+	}
+	else{
+		creation1.classList.remove('active');
+		creation2.classList.remove('active');
+		creation3.classList.remove('active');
+	}
+	if(scroll >= 2100){
+		passionTitle.classList.add('active');
+	}
+	else{
+		passionTitle.classList.remove('active');
+	}
+
+
 })
 
 
