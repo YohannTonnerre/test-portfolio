@@ -26,6 +26,7 @@ const skill2 = document.querySelector('.skill-box2');
 const skill3 = document.querySelector('.skill-box3');
 
 
+const creationWrapper = document.querySelector('.creation-wrapper');
 const creation = document.querySelector('.black-title');
 
 const creation1 = document.querySelector('.creation1');
@@ -112,9 +113,9 @@ window.addEventListener("scroll", ()=>{
 	}
 
 	if(scroll >= 800){
-		creation.style.marginTop = scroll/40 -30 + "vh";
+		creationWrapper.style.transform = "translateY(" +  scroll/10 + "px)";
 	}
-	if(scroll >= 1000){
+	if(scroll >= 1200){
 		creation.classList.add('active');
 	}
 	else{
