@@ -51,6 +51,7 @@ h2{
 
 .burger-container{
 	position: fixed;
+	mix-blend-mode: difference;
 	right: 0;
 	display: flex;
 	flex-direction: column;
@@ -87,6 +88,11 @@ h2{
 	transform: rotate(180deg);
 	background-color: rgba(0,0,0,1);
 	transition: .2s .2s;
+}
+
+.burger-container.active{
+
+	mix-blend-mode: unset;
 }
 
 .burger-container.active .burger{
@@ -529,6 +535,8 @@ h2{
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+
+	mix-blend-mode: difference;
 }
 
 
@@ -536,6 +544,13 @@ h2{
 	text-align: center;
 	color: #000;
 	font-size: 5rem;
+	opacity: 0;
+	transition: .5s;
+}
+
+.black-title.active{
+	opacity: 1;
+	transition: .7s;
 }
 
 .creation-container{
@@ -573,11 +588,11 @@ h2{
 }
 
 .creation2{
-	transform: translateY(90vh);
+	transform: translateY(150vh);
 }
 
 .creation3{
-	transform: translateY(130vh);
+	transform: translateY(250vh);
 }
 
 .site-img{
@@ -645,7 +660,7 @@ h2{
 
 
 .passion-title{
-
+	margin-top: 10vh;
 	font-size: 5rem;
 	transform: translateX(30%);
 	opacity: 0;

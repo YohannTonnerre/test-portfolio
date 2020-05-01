@@ -84,6 +84,7 @@ btn.addEventListener("animationend", () => {
 
 window.addEventListener("scroll", ()=>{
 	var scroll = window.pageYOffset;
+	var menuHeight = burger.pageYOffset;
 	console.log(scroll);
 	btn.style.opacity = 1 + -scroll / 250 ;
 	chouette.style.opacity = 1 + -scroll / 250 ;
@@ -111,7 +112,13 @@ window.addEventListener("scroll", ()=>{
 	}
 
 	if(scroll >= 800){
-		creation.style.marginTop = scroll/30 -30 + "vh";
+		creation.style.marginTop = scroll/40 -30 + "vh";
+	}
+	if(scroll >= 1000){
+		creation.classList.add('active');
+	}
+	else{
+		creation.classList.remove('active');		
 	}
 
 	if(scroll >= 1300){
@@ -124,7 +131,7 @@ window.addEventListener("scroll", ()=>{
 		creation2.classList.remove('active');
 		creation3.classList.remove('active');
 	}
-	if(scroll >= 2100){
+	if(scroll >= 2200){
 		passionTitle.classList.add('active');
 	}
 	else{
