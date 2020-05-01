@@ -1,5 +1,9 @@
 const html = document.querySelector('html');
 
+const cursor = document.getElementById('cursor');
+
+
+
 const loading = document.querySelector('.loading');
 
 const titleSpan1 = document.querySelector('.span-title1');
@@ -36,6 +40,20 @@ const creation3 = document.querySelector('.creation3');
 
 const passionTitle = document.querySelector('.passion-title');
 
+
+window.addEventListener('mousemove', ()=>{
+	var x = event.clientX;
+	var y = event.clientY;
+	if ( typeof x !== 'undefined' ){
+        cursor.style.left = x + "px";
+        cursor.style.top = y + "px";
+    }
+}, false);
+
+
+$('.burger-container, a').hover( ()=>{
+	cursor.classList.toggle('active');
+})
 
 
 
@@ -138,8 +156,6 @@ window.addEventListener("scroll", ()=>{
 	else{
 		passionTitle.classList.remove('active');
 	}
-
-
 })
 
 
