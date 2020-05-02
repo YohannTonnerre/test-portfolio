@@ -13,6 +13,12 @@ html.no-scroll{
 	overflow-y: hidden;	
 }
 
+
+::selection {
+	 color: #111;
+	 background: #eee;
+ }
+
 #cursor{
 	position: fixed;
 	pointer-events: none;
