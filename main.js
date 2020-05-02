@@ -40,6 +40,10 @@ const creation3 = document.querySelector('.creation3');
 
 const passionTitle = document.querySelector('.passion-title');
 
+const passion1 = document.querySelector('.passion1');
+
+const passionImg1 = document.querySelector('.passion1-img');
+
 
 window.addEventListener('mousemove', ()=>{
 	var x = event.clientX;
@@ -156,9 +160,25 @@ window.addEventListener("scroll", ()=>{
 	else{
 		passionTitle.classList.remove('active');
 	}
+
+	if(scroll >= 2600){
+		passion1.classList.add('active');
+	}
+	else{
+		passion1.classList.remove('active');
+	}
 })
 
 
+passion1.addEventListener('mousemove', ()=>{
+	var x = event.clientX;
+	var y = event.clientY;
+	passionImg1.style.backgroundPosition =   x / 200 + "%" + y / 200 + "%";
+})
+
+passion1.scrollBloc = function(){
+	alert('aaa');
+}
 
 
 window.onload = start();
