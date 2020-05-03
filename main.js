@@ -1,6 +1,6 @@
 const html = document.querySelector('html');
 
-const cursor = document.getElementById('cursor');
+var cursor = document.getElementById('cursor');
 
 
 
@@ -113,10 +113,9 @@ btn.addEventListener("animationend", () => {
 
 
 
-window.addEventListener("scroll", ()=>{
+$(window).scroll(function () {
 	var scroll = window.pageYOffset;
 	var menuHeight = burger.pageYOffset;
-	console.log(scroll);
 	btn.style.opacity = 1 + -scroll / 250 ;
 	chouette.style.opacity = 1 + -scroll / 250 ;
 	devWeb.style.opacity = 1 + -scroll / 250 ;
@@ -127,70 +126,136 @@ window.addEventListener("scroll", ()=>{
 	if(scroll >= 100){
 		competence.classList.add('active');
 	}
-	else{
-		competence.classList.remove('active');
-	}
 
-	if(scroll >= 400){
-		skill1.classList.add('active');
-		skill2.classList.add('active');
-		skill3.classList.add('active');
-	}
-	else{
-		skill1.classList.remove('active');
-		skill2.classList.remove('active');
-		skill3.classList.remove('active');
-	}
 
-	if(scroll >= 800){
-		creationWrapper.style.transform = "translateY(" +  scroll/10 + "px)";
-	}
-	if(scroll >= 1200){
-		creation.classList.add('active');
-	}
-	else{
-		creation.classList.remove('active');		
-	}
+	if ($('.competence ').isInViewport()) {
+	        $('.competence').addClass('active');
+	    } 
+		else{
+			$('.competence').removeClass('active');
+		}
 
-	if(scroll >= 1300){
-		creation1.classList.add('active');
-		creation2.classList.add('active');
-		creation3.classList.add('active');
-	}
-	else{
-		creation1.classList.remove('active');
-		creation2.classList.remove('active');
-		creation3.classList.remove('active');
-	}
-	if(scroll >= 2200){
-		passionTitle.classList.add('active');
-	}
-	else{
-		passionTitle.classList.remove('active');
-	}
+		if ($('.skill-box1 ').isInViewport()) {
+	        $('.skill-box1').addClass('active');
+	        $('.skill-box2').addClass('active');
+	        $('.skill-box3').addClass('active');
+	    } 
 
-	if(scroll >= 2700){
-		passion1.classList.add('active');
-	}
-	else{
-		passion1.classList.remove('active');
-	}
-	if(scroll >= 3500){
-		passion2.classList.add('active');
-	}
-	else{
-		passion2.classList.remove('active');
-	}
-	if(scroll >= 4200){
-		passion3.classList.add('active');
-	}
-	else{
-		passion3.classList.remove('active');
-	}
+		else{
+			$('.skill-box1').removeClass('active');
+			$('.skill-box2').removeClass('active');
+			$('.skill-box3').removeClass('active');
+		}
+
+
+		if ($('.creation-wrapper').isInViewport()) {
+			creationWrapper.style.transform = "translateY(" +  scroll/10 + "px)";
+		}
+
+
+
+		if ($('.black-title').isInViewport()) {
+	        $('.black-title').addClass('active');
+		}
+
+		else{
+			$('.black-title').removeClass('active');		
+		}
+
+
+
+
+		if ($('.creation1').isInViewport()) {
+	        $('.creation1').addClass('active');
+	        $('.creation2').addClass('active');
+	        $('.creation3').addClass('active');
+		}
+		else{
+			$('.creation1').removeClass('active');
+			$('.creation2').removeClass('active');
+			$('.creation3').removeClass('active');
+		}
+
+
+		if ($('.passion-title').isInViewport()){
+	        $('.passion-title').addClass('active');
+		}
+		else{
+			$('.passion-title').removeClass('active');
+		}
+
+		if ($('.passion-paragraph-wrapper1').isInViewport()){
+	        $('.passion1').addClass('active');
+		}
+		else{
+	        $('.passion1').removeClass('active');
+		}
+
+		if ($('.passion-paragraph-wrapper2').isInViewport()){
+	        $('.passion2').addClass('active');
+		}
+		else{
+	        $('.passion2').removeClass('active');
+		}
+
+
+		if ($('.passion-paragraph-wrapper3').isInViewport()){
+	        $('.passion3').addClass('active');
+		}
+		else{
+	        $('.passion3').removeClass('active');
+		}
+
+		if ($('.draw').isInViewport()){
+	        $('.draw').addClass('active');
+		}
+		else{
+	        $('.draw').removeClass('active');
+		}
+
+		if ($('.teset').isInViewport()){
+	        $('.teset').addClass('active');
+		}
+		else{
+	        $('.teset').removeClass('active');
+		}
+
+
+		if ($('.contact-title').isInViewport()){
+	        $('.contact-title').addClass('active');
+		}
+		else{
+	        $('.contact-title').removeClass('active');
+		}
+
+		
+		if ($('.contact-paragraph').isInViewport()){
+	        $('.contact-paragraph').addClass('active');
+		}
+		else{
+	        $('.contact-paragraph').removeClass('active');
+		}
+
+
+		if ($('.formation-title').isInViewport()){
+	        $('.formation-title').addClass('active');
+		}
+		else{
+	        $('.formation-title').removeClass('active');
+		}
+
+
+
+		
+
+	
+
 })
 
 
-passion1.addEventListener('mousemove', ()=>{
+
+
+/*passion1.addEventListener('mousemove', ()=>{
 	var x = event.clientX;
 	var y = event.clientY;
 	passionImg1.style.backgroundPosition =   x / 200 + "%" + y / 200 + "%";
@@ -204,7 +269,7 @@ passion2.addEventListener('mousemove', ()=>{
 
 passion1.scrollBloc = function(){
 	alert('aaa');
-}
+}*/
 
 
 window.onload = start();
