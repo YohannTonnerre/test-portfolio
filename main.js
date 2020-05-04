@@ -80,7 +80,8 @@ burger.addEventListener('click', ()=>{
 
 function start(){
 	loading.style.animation = "loading 1s ease 1s forwards";
-	underline.style.animation = "underline 1.2s ease 1s";
+	underline.style.animation = "underlined 1.2s ease 1s";
+	html.classList.toggle('no-scroll');
 }
 
 loading.addEventListener("animationend", () => {
@@ -108,6 +109,7 @@ btn.addEventListener("animationend", () => {
 	logo.style.animation = "downed .8s ease forwards .2s";
 	burger.style.animation = "downed .8s ease forwards .2s";
 	menuContent.style.opacity = 1;
+	html.classList.toggle('no-scroll');
 })
 
 

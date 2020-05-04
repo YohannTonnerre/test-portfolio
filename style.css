@@ -337,7 +337,7 @@ h3{
 }
 
 
-@keyframes underline{
+@keyframes underlined{
 	0%{
 		right: -100%;		
 	}
