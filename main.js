@@ -132,12 +132,18 @@ $(window).scroll(function () {
 
 	if ($('.competence ').isInViewport()) {
 	        $('.competence').addClass('active');
+	        $('.skill-box1').addClass('active');
+	        $('.skill-box2').addClass('active');
+	        $('.skill-box3').addClass('active');
 	    } 
 		else{
 			$('.competence').removeClass('active');
+			$('.skill-box1').removeClass('active');
+			$('.skill-box2').removeClass('active');
+			$('.skill-box3').removeClass('active');
 		}
 
-		if ($('.skill-box1 ').isInViewport()) {
+		/*if ($('.skill-box1 ').isInViewport()) {
 	        $('.skill-box1').addClass('active');
 	        $('.skill-box2').addClass('active');
 	        $('.skill-box3').addClass('active');
@@ -147,7 +153,7 @@ $(window).scroll(function () {
 			$('.skill-box1').removeClass('active');
 			$('.skill-box2').removeClass('active');
 			$('.skill-box3').removeClass('active');
-		}
+		}*/
 
 
 		if ($('.creation-wrapper').isInViewport()) {

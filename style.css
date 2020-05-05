@@ -391,7 +391,6 @@ h3{
 	background-color: #fff;	
 	transition: .4s;
 	box-shadow: 0 0 50px #fff;
-	border-radius: 20px;
 }
 
 .from-top:hover p{
@@ -498,7 +497,7 @@ h3{
 	font-size: 2rem;
 	border: 3px solid #fff;
 	border-radius: 5px;
-	transform: translateY(30vh) rotate(90deg);
+	transform: translateY(50vh) rotate(90deg);
 	opacity: 0;
 	transition: 1s;
 }
