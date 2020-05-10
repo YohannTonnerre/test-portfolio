@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/viewport.js"></script>
+</head>
+<body>
+	<div id="cursor"></div>
+	<section class="contact-container">
+		<div class="title-contact-container">
+			<h1 class="contact-title-h1">Contact</h1>
+		</div>
+		<div class="contact-white-div"></div>
+		<div class="contact-black-div">
+		</div>
+	</section>
+	<section class="contact-second-container">
+		<form class="container-contact-us" action="contactform.php" method="post">
+			<div class="row100">
+				<div class="col">
+					<div class="inputBox">
+						<input type="text" name="name" required="">
+						<label class="span-text">Nom Prénom</label>
+						<span class="line"></span>
+					</div>
+				</div>
+				<div class="col">
+					<div class="inputBox">
+						<input type="text" name="mail" required="">
+						<label class="span-text">E-mail</label>
+						<span class="line"></span>
+					</div>
+				</div>
+				<div class="col">
+					<div class="inputBox">
+						<input name="subject" type="text" required="">
+						<label class="span-text">Sujet</label>
+						<span class="line"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row100">
+				<div class="col">
+					<div class="inputBox textarea">
+						<textarea name="message" required="required"></textarea>
+						<label class="span-text">Votre message</label>
+						<span class="line"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row100">
+				<div class="col">
+					<button class="send" type="submit" name="submit">Envoyer</button>
+				</div>
+			</div>
+		</form>
+	</section>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
