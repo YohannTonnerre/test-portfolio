@@ -10,7 +10,7 @@ html {
 }
 
 html.no-scroll {
-    overflow-y: hidden;
+   /*  overflow-y: hidden; */
 }
 
 
@@ -54,6 +54,10 @@ h2 {
 h3 {
     font-size: 4rem;
 }
+
+/* .isloaded{
+    display: none;
+} */
 
 .first-view {
     background-color: #000;
@@ -617,6 +621,75 @@ h3 {
     transition: transform 1s .4s, opacity 1s;
 }
 
+.creation-link-wrapper{
+    overflow: hidden;
+    margin-top: 10vh;
+}
+
+.creation-link-container{
+    background-color: #fff;
+    border: 2px solid #000;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.creation-link-container a{
+    color: #000;
+    position: relative;
+    padding: 1rem 2rem;
+    transition: .5s;
+}
+
+.creation-link-container a:after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-45%,-50%) rotate(-55deg);
+    transition: transform .5s .5s, width .5s .5s, height .5s, background-color .5s;    
+    width: 80%;
+    height: 5px;
+    background-color: #fff;
+}
+
+.creation-link-container a:before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-55%,-50%) rotate(-55deg);
+    transition: transform .5s .5s, width .5s .5s, height .5s, background-color .5s;
+    width: 80%;
+    height: 5px;
+    background-color: #fff;
+}
+
+.creation-link-container a:hover:after{
+    transform: translate(-55%,-50%) rotate(0deg);
+    transition: transform .5s, width .5s, height .5s .5s, background-color .5s .5s;
+    width: 150%;
+    height: 100%;
+    background-color: #000;
+}
+
+.creation-link-container a:hover:before{
+    transform: translate(-55%,-50%) rotate(0deg);
+    transition: transform .5s, width .5s, height .5s .5s, background-color .5s .5s;
+    width: 150%;
+    height: 100%;
+    background-color: #000;
+}
+
+.creation-link-container a:hover{
+    color: #fff;
+    transition: .5s .5s;
+}
 
 .creation:hover .site-img {
     filter: grayscale(0%);
@@ -647,6 +720,18 @@ h3 {
     transform: translateY(250vh);
 }
 
+.creation4 {
+    transform: translateY(10vh);
+    transition: .4s;
+    opacity: 0;
+}
+
+.creation4.active{
+    transition: transform .4s, opacity 1s;
+    transition-delay: .8s;
+    transform: translateY(0);  
+    opacity: 1;  
+}
 .site-img {
     object-fit: cover;
     width: 100%;
@@ -1212,4 +1297,137 @@ footer{
 footer a img{
 	width: 50px;
 	margin: 0 2rem;
+}
+
+.big-container{
+    height: 1000vh;
+}
+
+.creation-page-container{
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.real-entrance{
+    animation: realEntrance 3s forwards;
+    width: 100vw;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.creation-entrance-container{
+    position: relative;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+}
+
+
+.creation-entrance{
+    width: 200%;
+    height: 7px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 7;
+    top: 50%;
+    left: 50%;
+}
+
+.creation-entrance1{
+    animation: creationEntrance1 3s forwards;
+}
+
+.creation-entrance2{
+    animation: creationEntrance2 3s forwards;
+}
+
+@keyframes creationEntrance1{
+    0%{
+
+        transform: translate(-50%, -50%) rotate(35deg);  
+    }
+
+    20%{
+        transform: translate(-40%, -50%) rotate(35deg);        
+    }
+    50%{
+        transform: translate(-50%, -50%) rotate(180deg);          
+    }
+    100%{
+        transform: translate(-50%, 51vh) rotate(180deg);        
+    }
+}
+
+@keyframes creationEntrance2{
+    0%{
+
+        transform: translate(-50%, -50%) rotate(35deg);  
+    }
+
+    20%{
+        transform: translate(-60%, -50%) rotate(35deg);        
+    }
+    50%{
+        transform: translate(-50%, -50%) rotate(180deg);          
+    }
+    100%{
+        transform: translate(-50%, -51vh) rotate(180deg);
+    }
+}
+
+@keyframes realEntrance{
+    0%{
+        height: 0;
+    }
+    50%{
+        height: 0;        
+    }
+    100%{
+        height: 100vh;         
+    }
+}
+
+.creation-title-h1{
+    font-size: 15vw;
+    mix-blend-mode: difference;
+    color: #fff;
+}
+
+.first-creation-container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+}
+
+.creation-img-container{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.creation-img{
+    width: 25%;
+    object-fit: contain;
+}
+
+.creation-title-h2{
+    font-size: 4rem;
+    color: #000;
 }

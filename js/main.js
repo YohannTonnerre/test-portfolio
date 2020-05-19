@@ -1,6 +1,5 @@
 const html = document.querySelector('html');
 
-var cursor = document.getElementById('cursor');
 
 
 
@@ -53,15 +52,6 @@ const passion3 = document.querySelector('.passion3');
 const passionImg3 = document.querySelector('.passion3-img');
 
 
-window.addEventListener('mousemove', ()=>{
-	var x = event.clientX;
-	var y = event.clientY;
-	if ( typeof x !== 'undefined' ){
-        cursor.style.left = x + "px";
-        cursor.style.top = y + "px";
-    }
-}, false);
-
 
 $('.burger-container, a').hover( ()=>{
 	cursor.classList.toggle('active');
@@ -88,6 +78,7 @@ loading.addEventListener("animationend", () => {
 	titleSpan1.style.animation = "down .5s ease .2s forwards";
 	titleSpan2.style.animation = "down .5s ease .4s forwards";
 	loading.style.display = "none";
+	/*$('.isloaded').removeClass('isloaded');*/
 })
 
 
@@ -177,11 +168,13 @@ $(window).scroll(function () {
 	        $('.creation1').addClass('active');
 	        $('.creation2').addClass('active');
 	        $('.creation3').addClass('active');
+	        $('.creation4').addClass('active');
 		}
 		else{
 			$('.creation1').removeClass('active');
 			$('.creation2').removeClass('active');
 			$('.creation3').removeClass('active');
+			$('.creation4').removeClass('active');
 		}
 
 
