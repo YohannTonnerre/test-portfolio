@@ -178,34 +178,7 @@ $(window).scroll(function () {
 		}
 
 
-		if ($('.passion-title').isInViewport()){
-	        $('.passion-title').addClass('active');
-		}
-		else{
-			$('.passion-title').removeClass('active');
-		}
-
-		if ($('.passion-paragraph-wrapper1').isInViewport()){
-	        $('.passion1').addClass('active');
-		}
-		else{
-	        $('.passion1').removeClass('active');
-		}
-
-		if ($('.passion-paragraph-wrapper2').isInViewport()){
-	        $('.passion2').addClass('active');
-		}
-		else{
-	        $('.passion2').removeClass('active');
-		}
-
-
-		if ($('.passion-paragraph-wrapper3').isInViewport()){
-	        $('.passion3').addClass('active');
-		}
-		else{
-	        $('.passion3').removeClass('active');
-		}
+		
 
 		if ($('.draw').isInViewport()){
 	        $('.draw').addClass('active');
