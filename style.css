@@ -120,11 +120,19 @@ h3 {
 }
 
 .burger-container.active .burger,
-.burger-container.active .burger:after,
-.burger-container.active .burger:before {
+.burger-container.active .burger::after,
+.burger-container.active .burger::before {
     transform: rotate(180deg);
     background-color: rgba(0, 0, 0, 1);
     transition: .2s .2s;
+}
+
+.burger-container:hover .burger::before{
+    transform: translateX(-10px);
+}
+
+.burger-container:hover .burger::after{
+    transform: translateX(10px);
 }
 
 .burger-container.active {
@@ -136,12 +144,12 @@ h3 {
     background-color: rgba(0, 0, 0, 0);
 }
 
-.burger-container.active .burger:before {
+.burger-container.active .burger::before {
     transform: rotate(45deg);
     top: 0;
 }
 
-.burger-container.active .burger:after {
+.burger-container.active .burger::after {
     transform: rotate(135deg);
     top: 0;
 }
@@ -166,7 +174,7 @@ h3 {
 
 
 
-.burger:after {
+.burger::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -177,7 +185,7 @@ h3 {
     transition: .2s .2s;
 }
 
-.burger:before {
+.burger::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -248,8 +256,8 @@ h3 {
     opacity: 1;
 }
 
-.menu-content a:after,
-.menu-content a:before {
+.menu-content a::after,
+.menu-content a::before {
     content: '';
     position: absolute;
     z-index: -1;
@@ -258,25 +266,25 @@ h3 {
     background-color: #000;
 }
 
-.menu-content a:after {
+.menu-content a::after {
     left: 0;
     bottom: 0;
     transition: .4s;
 }
 
-.menu-content a:before {
+.menu-content a::before {
     right: 0;
     top: 0;
     transition: .4s;
 }
 
-.menu-content a:hover:before {
+.menu-content a:hover::before {
     width: 100%;
     transition: width .4s, height .2s .4s;
     height: 60%;
 }
 
-.menu-content a:hover:after {
+.menu-content a:hover::after {
     width: 100%;
     transition: width .4s, height .2s .4s;
     height: 60%;
@@ -536,7 +544,7 @@ h3 {
     position: relative;
 }
 
-.skill-box p:before {
+.skill-box p::before {
     content: '';
     z-index: -1;
     position: absolute;
@@ -548,7 +556,7 @@ h3 {
     transition: height .2s .5s, width .5s;
 }
 
-.skill-box:hover p:before {
+.skill-box:hover p::before {
     height: 100%;
     width: 105%;
     transition: height 1s, width .2s 1s;
@@ -644,7 +652,7 @@ h3 {
     transition: .5s;
 }
 
-.creation-link-container a:after{
+.creation-link-container a::after{
     content: '';
     position: absolute;
     z-index: -1;
@@ -657,7 +665,7 @@ h3 {
     background-color: #fff;
 }
 
-.creation-link-container a:before{
+.creation-link-container a::before{
     content: '';
     position: absolute;
     z-index: -1;
@@ -670,7 +678,7 @@ h3 {
     background-color: #fff;
 }
 
-.creation-link-container a:hover:after{
+.creation-link-container a:hover::after{
     transform: translate(-55%,-50%) rotate(0deg);
     transition: transform .5s, width .5s, height .5s .5s, background-color .5s .5s;
     width: 150%;
@@ -678,7 +686,7 @@ h3 {
     background-color: #000;
 }
 
-.creation-link-container a:hover:before{
+.creation-link-container a:hover::before{
     transform: translate(-55%,-50%) rotate(0deg);
     transition: transform .5s, width .5s, height .5s .5s, background-color .5s .5s;
     width: 150%;
@@ -692,7 +700,6 @@ h3 {
 }
 
 .creation:hover .site-img {
-    filter: grayscale(0%);
     transition: .4s;
 }
 
@@ -706,6 +713,10 @@ h3 {
 .creation:hover .ornement3 {
     width: 60%;
     transition: .4s;
+}
+
+.creation{
+    position: relative;
 }
 
 .creation1 {
@@ -735,10 +746,73 @@ h3 {
 .site-img {
     object-fit: cover;
     width: 100%;
-    filter: grayscale(100%);
     transition: .4s;
 }
 
+.creation::before{
+    font-size: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    opacity: 0; 
+}
+
+.creation1::before{
+    color: #F58966;
+}
+
+.creation1::after{
+    background-color: #294941;
+}
+
+.creation2::before{
+    color: #DE94BF;
+}
+
+.creation2::after{
+    background-color: #A9D9F4;
+}
+
+.creation3::before{
+    color: #D40000;
+}
+
+.creation3::after{
+    background-color: #141111;
+}
+
+.creation1::before{
+    content: 'Makito';
+}
+
+.creation2::before{
+    content: 'Quoi thé';
+}
+
+.creation3::before{
+    content: 'Retrogarage';
+}
+
+.creation::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0;
+    left: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.creation:hover::after{
+    width: 100%;
+}
+
+.creation:hover::before{
+    opacity: 1;
+    transition: .4s .2s;
+}
 
 
 .creation .ornement1 {
@@ -1030,7 +1104,7 @@ h3 {
 }
 
 
-.contact-paragraph:after {
+.contact-paragraph::after {
     content: '';
     width: 0;
     height: 3px;
@@ -1045,7 +1119,7 @@ h3 {
     transition: 2s;
 }
 
-.contact-paragraph.active:after {
+.contact-paragraph.active::after {
     animation: underline 2s ease forwards;
 }
 
@@ -1065,7 +1139,11 @@ h3 {
     color: #fff;
 }
 
-.contact-me:after {
+.contact-link{
+    color: #fff;
+}
+
+.contact-me::after{
     content: '';
     width: 100%;
     height: 0;
@@ -1077,7 +1155,7 @@ h3 {
     transition: .4s;
 }
 
-.contact-me:hover:after {
+.contact-me:hover::after, .contact-me.active::after {
     height: calc(100% + 1rem);
     transition: .4s;
 }
